@@ -10,6 +10,10 @@ ref class MyPoint
 public:
 	MyPoint(Point^ point, int number);
 
+	MyPoint(int x, int y, int number);
+
+	MyPoint(int x, int y);
+
 	void draw(Bitmap^ bm);
 
 	int getX() {
@@ -20,6 +24,13 @@ public:
 		return point->Y;
 	}
 
+	int getNumber() {
+		return number;
+	}
+
+	bool isExtra() {
+		return number == 0;
+	}
 
 };
 

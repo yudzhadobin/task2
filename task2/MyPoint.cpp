@@ -7,6 +7,18 @@ MyPoint::MyPoint(Point ^ point, int number)
 	this->point = point;
 }
 
+MyPoint::MyPoint(int x, int y)
+{
+	this->point = gcnew Point(x, y);
+	this->number = -1;
+}
+
+MyPoint::MyPoint(int x, int y, int number)
+{
+	this->point = gcnew Point(x, y);
+	this->number = number;
+}
+
 void MyPoint::draw(Bitmap ^ bm)
 {
 	Graphics^ im = Graphics::FromImage(bm);
